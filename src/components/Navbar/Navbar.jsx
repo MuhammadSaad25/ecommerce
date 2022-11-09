@@ -16,18 +16,15 @@ const Navbar = () => {
         <button>Login</button>
       </Link>
 
-      <Link>
+      <Link to="/cart">
         <div className="cart-btn">
           <img src={cart} alt="cart icon" />
           <span className="cart-icon-css">0</span>
         </div>
       </Link>
 
-      <Link>
-        <div className="cart-btn">
-
-          <img src={usericon} alt="user-icon" className="profile-icon" />
-        </div>
+      <Link to="/user">
+        <img src={usericon} alt="user-icon" className="profile-icon" />
       </Link>
     </nav>
   );

@@ -5,6 +5,7 @@ import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import Cart from "./components/Cart/Cart";
 import PgFof from "./components/PgFof/PgFof";
+import User from "./components/User/User";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/user" element={<User />} />
         <Route path="*" element={<PgFof />} />
       </Routes>
     </BrowserRouter>
