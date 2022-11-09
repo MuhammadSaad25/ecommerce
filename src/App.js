@@ -15,6 +15,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/user" element={<User />} />
         <Route path="*" element={<PgFof />} />

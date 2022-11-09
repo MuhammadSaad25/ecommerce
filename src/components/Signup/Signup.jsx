@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import{auth,db} from '../../firebaseConfigs/firebaseConfigs'
-import{collection,addDoc} from'firebase/firestore'
-import'./Signup.css'
+import { auth, db } from '../../firebaseConfigs/firebaseConfigs'
+import { collection, addDoc } from 'firebase/firestore'
+import './Signup.css'
 // C:\clone repo batech 8\ecommerce\src\firebaseConfigs\firebaseConfigs.js
 // import { createUserWithEmailAndPassword } from "firebase/auth";
 // import { auth, db } from "../../firebaseConfigs/firebaseConfigs";
@@ -51,7 +51,7 @@ const Signup = () => {
           .catch((error) => { setErrorMsg(error.message) });
       })
       .catch((error) => {
-        if (error.message ==='Firebase:Error (auth/invalid-email).') {
+        if (error.message === 'Firebase:Error (auth/invalid-email).') {
           setErrorMsg('Please fill all required fields')
         }
         if (error.message === 'Firebase:Error (auth/email-already-in-use).') {
@@ -69,10 +69,10 @@ const Signup = () => {
         <form className="signup-form" onSubmit={handleSubmit}>
           <p>Create Account</p>
           {successMsg && <><div className="success-msg">
-          {successMsg}
+            {successMsg}
           </div></>}
           {errorMsg && <><div className="error-msg">
-          {errorMsg}
+            {errorMsg}
           </div></>}
 
           <label>Your Name</label>
