@@ -70,7 +70,7 @@ const Navbar = () => {
             </div>
           </Link>
 
-          <Link to="/user">
+          <Link to="/userprofile">
             <img src={usericon} alt="user-icon" className="profile-icon" />
           </Link>
 
@@ -89,7 +89,7 @@ const Navbar = () => {
             </div>
           </Link>
 
-          <Link to="/user">
+          <Link to="/userprofile">
             <img src={usericon} alt="user-icon" className="profile-icon" />
           </Link>
 
