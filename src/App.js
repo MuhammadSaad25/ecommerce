@@ -6,6 +6,7 @@ import Signup from "./components/Signup/Signup";
 import Cart from "./components/Cart/Cart";
 import PgFof from "./components/PgFof/PgFof";
 import UserProfile from "./components/UserProfile/UserProfile";
+import Addproduct from "./components/Addproduct/Addproduct";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/signup/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/userprofile" element={<UserProfile />} />
+        <Route path="/sellproduct" element={<Addproduct />} />
         <Route path="*" element={<PgFof />} />
       </Routes>
     </BrowserRouter>

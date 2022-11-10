@@ -81,6 +81,10 @@ const Navbar = () => {
           <Link to="/">
             <button>Home</button>
           </Link>
+          
+          <Link to="/sellproduct">
+            <button>Sell</button>
+          </Link>
 
           <Link to="/cart">
             <div className="cart-btn">

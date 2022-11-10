@@ -24,7 +24,7 @@ const Login = () => {
         setTimeout(() => {
           setSuccessMsg('');
           navigate('/home')
-        }, 3000)
+        }, 1000)
 
       })
       .catch((error) => {
