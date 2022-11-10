@@ -44,7 +44,7 @@ const Addproduct = () => {
         return user
     }
 
-    const types = ['image/jpg', 'image/jpeg', 'image/png', 'image/PNG']
+    const types = ['image/jpg', 'image/jpeg', 'image/png', 'image/PNG',"image/webp"]
     const handleProductImg = (e) => {
         e.preventDefault();
         let selectedFile = e.target.files[0];
