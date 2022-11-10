@@ -51,12 +51,14 @@ const Signup = () => {
           .catch((error) => { setErrorMsg(error.message) });
       })
       .catch((error) => {
-        if (error.message === 'Firebase:Error (auth/invalid-email).') {
-          setErrorMsg('Please fill all required fields')
-        }
-        if (error.message === 'Firebase:Error (auth/email-already-in-use).') {
-          setErrorMsg('user already exists')
-        }
+        console.log(error.message);
+        setErrorMsg(error.message);
+        // if (error.message === 'Firebase:Error (auth/invalid-email).') {
+        //   setErrorMsg('Please fill all required fields')
+        // }
+        // if (error.message === 'Firebase:Error (auth/email-already-in-use).') {
+        //   setErrorMsg('user already exists')
+        // }
 
       })
 
