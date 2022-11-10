@@ -61,7 +61,7 @@ const Signup = () => {
         // }
 
       })
-
+      e.reset()
   }
 
   return (
