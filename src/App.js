@@ -16,8 +16,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
+        {/* <Route path="/login/signup" element={<Signup />} /> */}
         <Route path="/login" element={<Login />} />
-        <Route path="/signup/login" element={<Login />} />
+        {/* <Route path="/signup/login" element={<Login />} /> */}
         <Route path="/cart" element={<Cart />} />
         <Route path="/userprofile" element={<UserProfile />} />
         <Route path="/sellproduct" element={<Addproduct />} />
@@ -39,7 +40,7 @@ function App() {
           element={<Allproductpage type={'Shoes'} />}
         />
 
-        <Route path="*" element={<PgFof />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
