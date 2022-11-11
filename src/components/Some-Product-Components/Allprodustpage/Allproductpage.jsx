@@ -24,7 +24,7 @@ const Allproductpage = (props) => {
         }
         getProducts()
     }, [])
-    console.log(props.type)
+    // console.log(props.type)
     return (
         <div className='allproductpage'>
             <Navbar />

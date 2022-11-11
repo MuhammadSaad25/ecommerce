@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
-import Product from "../Product/Product";
+// import Product from "../Product/Product";
+import ProductSlider from "../Some-Product-Components/ProductSlider/ProductSlider";
 import Baner from "../Baner/Baner";
 import { auth, db } from '../../firebaseConfigs/firebaseConfigs'
 import { collection, getDocs, query, where } from "firebase/firestore";
@@ -39,7 +40,8 @@ const Home = () => {
     <div>
       <Navbar />
       <Baner />
-      <Product />
+      <ProductSlider type={'Mobile'} />
+      {/* <Product /> */}
     </div>
   )
 };

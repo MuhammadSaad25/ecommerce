@@ -35,7 +35,7 @@ const Signup = () => {
           username: username, email: email, phonenumber: phonenumber,
           password: password, cart: initialcatvalue, address: address, uid: user.uid
         }).then(() => {
-          setSuccessMsg('New user added successfully, you will now be automatically redirected to login page.')
+          setSuccessMsg('New user added successfully, you will now be automatically redirected to home page.')
           setUserName('')
           setPassword('')
           setEmail('')
@@ -44,7 +44,7 @@ const Signup = () => {
 
           setTimeout(() => {
             setSuccessMsg('');
-            navigate('/login')
+            navigate('/home')
           }, 1000)
 
         })
