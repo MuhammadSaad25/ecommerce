@@ -12,12 +12,12 @@ const Productcontainer = (product) => {
     return (
         <div className='product-container'>
             <img src={product.product.productimage} alt="" />
-            <div className='prduct-details'>
+            <div className='product-details'>
                 <p className='producttitle'>{product.product.productTitle}</p>
                 <div className='price-container'>
                     <span className='mrp'>MRP: <p className='rate'>Rs.{mrp}</p> </span>
-                    <span className='saleprice'>Discount Price: <p className='rate'>Rs.{saleprice}</p> </span>
-                    <p className='yousave'>You Save: Rs.{mrp - saleprice} </p>
+                    <span className='saleprice'>Discount <p className='rate'>Rs.{saleprice}</p> </span>
+                    <span className='yousave'>You Save: Rs.{mrp - saleprice} </span>
                 </div>
                 <div className='buy-cart'>
                     <button className='btn'>Buy Now</button>

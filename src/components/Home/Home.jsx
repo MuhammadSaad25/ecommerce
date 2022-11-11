@@ -6,6 +6,7 @@ import Baner from "../Baner/Baner";
 import { auth, db } from '../../firebaseConfigs/firebaseConfigs'
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { async } from "@firebase/util";
+import './Home.css'
 
 const Home = () => {
 
@@ -40,7 +41,11 @@ const Home = () => {
     <div>
       <Navbar />
       <Baner />
+      <div className="slider-head"><p>Limited Time Deals</p></div>
       <ProductSlider type={'Mobile'} />
+      <ProductSlider type={'Laptop'} />
+      <ProductSlider type={'Camera'} />
+      <ProductSlider type={'Shoes'} />
       {/* <Product /> */}
     </div>
   )

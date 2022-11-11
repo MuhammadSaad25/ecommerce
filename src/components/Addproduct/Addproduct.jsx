@@ -44,7 +44,7 @@ const Addproduct = () => {
         return user
     }
 
-    const types = ['image/jpg', 'image/jpeg', 'image/png', 'image/PNG',"image/webp"]
+    const types = ['image/jpg', 'image/jpeg', 'image/png', 'image/PNG', "image/webp"]
     const handleProductImg = (e) => {
         e.preventDefault();
         let selectedFile = e.target.files[0];
@@ -61,8 +61,9 @@ const Addproduct = () => {
             setImageError('Please select your file')
         }
     }
-
     const loggeduser = GetCurrentUser();
+
+
     //   if (loggeduser) { console.log(loggeduser[0].email) }
 
     const handleAddProduct = (e) => {

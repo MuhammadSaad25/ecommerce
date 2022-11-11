@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-// import './ProductSlider.css'
+import './ProductSlider.css'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Sliderproductcard from '../Sliderproductcard/Sliderproductcard'
