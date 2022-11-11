@@ -38,72 +38,79 @@ const Navbar = () => {
 
   const navigate = useNavigate()
 
-  const handleLogout = ()=>{
-    auth.signOut().then(()=>{
+  const handleLogout = () => {
+    auth.signOut().then(() => {
       navigate("/login")
     })
   }
 
   return (
+    <div>
+      <div className="navbar">
+        <div className="LeftContainer">
+          <img src={logo} alt="app logo" />
+        </div>
+        <div className="RightContainer">
+          {!loggeduser && <nav>
+            <Link to="/">
+              <button>Home</button>
+            </Link>
+            <Link to="/signup">
+              <button>Register</button>
+            </Link>
+            <Link to="/login">
+              <button>Login</button>
+            </Link>
 
-    <div className="navbar">
-      <div className="LeftContainer">
-        <img src={logo} alt="app logo" />
+
+            <Link to="/cart">
+              <div className="cart-btn">
+                <img src={cart} alt="cart icon" />
+                <span className="cart-icon-css">0</span>
+              </div>
+            </Link>
+
+            <Link to="/userprofile">
+              <img src={usericon} alt="user-icon" className="profile-icon" />
+            </Link>
+
+          </nav>}
+
+          {loggeduser && <nav>
+
+            <Link to="/">
+              <button>Home</button>
+            </Link>
+
+            <Link to="/sellproduct">
+              <button>Sell</button>
+            </Link>
+
+            <Link to="/cart">
+              <div className="cart-btn">
+                <img src={cart} alt="cart icon" />
+                <span className="cart-icon-css">{loggeduser[0].cart}</span>
+              </div>
+            </Link>
+
+            <Link to="/userprofile">
+              <img src={usericon} alt="user-icon" className="profile-icon" />
+            </Link>
+
+            <button className="logout-btn" onClick={handleLogout}>Logout</button>
+
+          </nav>}
+
+        </div>
       </div>
-      <div className="RightContainer">
-        {!loggeduser && <nav>
-          <Link to="/">
-            <button>Home</button>
-          </Link>
-          <Link to="/signup">
-            <button>Register</button>
-          </Link>
-          <Link to="/login">
-            <button>Login</button>
-          </Link>
 
-
-          <Link to="/cart">
-            <div className="cart-btn">
-              <img src={cart} alt="cart icon" />
-              <span className="cart-icon-css">0</span>
-            </div>
-          </Link>
-
-          <Link to="/userprofile">
-            <img src={usericon} alt="user-icon" className="profile-icon" />
-          </Link>
-
-        </nav>}
-
-        {loggeduser && <nav>
-
-          <Link to="/">
-            <button>Home</button>
-          </Link>
-          
-          <Link to="/sellproduct">
-            <button>Sell</button>
-          </Link>
-
-          <Link to="/cart">
-            <div className="cart-btn">
-              <img src={cart} alt="cart icon" />
-              <span className="cart-icon-css">{loggeduser[0].cart}</span>
-            </div>
-          </Link>
-
-          <Link to="/userprofile">
-            <img src={usericon} alt="user-icon" className="profile-icon" />
-          </Link>
-
-          <button className="logout-btn" onClick={handleLogout}>Logout</button>
-
-        </nav>}
-
+      <div className="product-types">
+        <a href="/product-types/mobiles"><button>Mobiles</button></a>
+        <a href="/product-types/laptops"><button>Laptops</button></a>
+        <a href="/product-types/cameras"><button>Cameras</button></a>
+        <a href="/product-types/shoes"><button>Shoes</button></a>
       </div>
     </div>
-
   );
 };
 

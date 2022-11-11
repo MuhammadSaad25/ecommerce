@@ -7,6 +7,7 @@ import Cart from "./components/Cart/Cart";
 import PgFof from "./components/PgFof/PgFof";
 import UserProfile from "./components/UserProfile/UserProfile";
 import Addproduct from "./components/Addproduct/Addproduct";
+import Allproductpage from "./components/Some-Product-Components/Allprodustpage/Allproductpage";
 
 function App() {
   return (
@@ -20,6 +21,24 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/userprofile" element={<UserProfile />} />
         <Route path="/sellproduct" element={<Addproduct />} />
+        <Route path="/sellproduct" element={<Addproduct />} />
+        <Route
+          path="/product-types/mobiles"
+          element={<Allproductpage type={'Mobile'} />}
+        />
+        <Route
+          path="/product-types/laptops"
+          element={<Allproductpage type={'Laptop'} />}
+        />
+        <Route
+          path="/product-types/cameras"
+          element={<Allproductpage type={'Camera'} />}
+        />
+        <Route
+          path="/product-types/shoes"
+          element={<Allproductpage type={'Shoes'} />}
+        />
+
         <Route path="*" element={<PgFof />} />
       </Routes>
     </BrowserRouter>
