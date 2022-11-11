@@ -1,4 +1,5 @@
 import React from 'react'
+import './Productcontainer.css'
 
 const Productcontainer = (product) => {
     let overalltax = 10 / 100;
@@ -14,8 +15,8 @@ const Productcontainer = (product) => {
             <div className='prduct-details'>
                 <p className='producttitle'>{product.product.productTitle}</p>
                 <div className='price-container'>
-                    <p className='mrp'>MRP: <p className='rate'>Rs.{mrp}</p> </p>
-                    <p className='saleprice'>Discount Price: <p className='rate'>Rs.{saleprice}</p> </p>
+                    <span className='mrp'>MRP: <p className='rate'>Rs.{mrp}</p> </span>
+                    <span className='saleprice'>Discount Price: <p className='rate'>Rs.{saleprice}</p> </span>
                     <p className='yousave'>You Save: Rs.{mrp - saleprice} </p>
             </div>
             <div className='buy-cart'>
