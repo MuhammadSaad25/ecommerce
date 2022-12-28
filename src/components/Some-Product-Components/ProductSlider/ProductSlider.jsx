@@ -17,11 +17,11 @@ const ProductSlider = (props) => {
             getDocs(collection(db, path)).then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     productsArray.push({ ...doc.data(), id: doc.id })
-                    console.log(doc.id, "=>", doc.data());
+                    // console.log(doc.id, "=>", doc.data());
                 })
                 setProducts(productsArray)
             }).catch((error) => {
-                console.log(error.message);
+                // console.log(error.message);
             })
         }
         getProducts()

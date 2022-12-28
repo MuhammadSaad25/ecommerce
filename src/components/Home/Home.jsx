@@ -35,7 +35,7 @@ const Home = () => {
   }
   const loggeduser = GetCurrentUser();
 
-  if (loggeduser) { console.log(loggeduser[0]); }
+  // if (loggeduser) 
 
   return (
     <div>

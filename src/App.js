@@ -8,6 +8,7 @@ import PgFof from "./components/PgFof/PgFof";
 import UserProfile from "./components/UserProfile/UserProfile";
 import Addproduct from "./components/Addproduct/Addproduct";
 import Allproductpage from "./components/Some-Product-Components/Allprodustpage/Allproductpage";
+import SpecificProductpage from "./components/Some-Product-Components/SpecificProductpage/SpecificProductpage";
 
 function App() {
   return (
@@ -39,6 +40,12 @@ function App() {
           path="/product-types/shoes"
           element={<Allproductpage type={"Shoes"} />}
         />
+        <Route
+          path="/product/:productType/:id"
+          element={<SpecificProductpage />}
+        />
+
+        {/* {`/product/${p.id}/${p.productTitle}/${p.brand}/${p.customersupport}/ ${p.description}/${p.price}/${p.productType}/${p.productimage}/${p.warranty}`} */}
 
         <Route path="*" element={<Home />} />
       </Routes>
