@@ -9,6 +9,7 @@ import "./Addproduct.css";
 const Addproduct = () => {
     const [productTitle, setProductTitle] = useState("");
     const [productType, setProductType] = useState("");
+    const [keyspecs, setKeyspecs] = useState("");
     const [description, setDescription] = useState("");
     const [brand, setBrand] = useState("");
     const [customersupport, setCustomersupport] = useState("");
@@ -89,6 +90,7 @@ const Addproduct = () => {
                     price,
                     warranty,
                     productimage: url,
+                    keyspecs: keyspecs
                 });
             });
         });
@@ -97,7 +99,7 @@ const Addproduct = () => {
     return (
         <div>
             <Navbar />
-            {loggeduser && loggeduser[0].email === "muhammadsaad@gmail.com" ? (
+            {loggeduser && (loggeduser[0].email === "muhammadsaad@gmail.com" || loggeduser[0].email === "saad@gmail.com") ? (
                 <div className="Addprod-container">
                     <form className="addprod-form" onSubmit={handleAddProduct}>
                         <p>Add Data</p>
@@ -112,7 +114,7 @@ const Addproduct = () => {
                             }}
                             placeholder="Product Title"
                         />
-
+                            
                         <label>Product Type</label>
                         <input
                             type="text"
@@ -155,6 +157,14 @@ const Addproduct = () => {
                                 setDescription(e.target.value);
                             }}
                             placeholder="Product Description"
+                        ></textarea>
+                        <label>Key Specications</label>
+                        <textarea
+                            type="text"
+                            onChange={(e) => {
+                                setDescription(e.target.value);
+                            }}
+                            placeholder="Enter Some Specifications"
                         ></textarea>
 
                         <label>Price</label>
