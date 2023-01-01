@@ -114,7 +114,7 @@ const Addproduct = () => {
                             }}
                             placeholder="Product Title"
                         />
-                            
+
                         <label>Product Type</label>
                         <input
                             type="text"
@@ -150,14 +150,6 @@ const Addproduct = () => {
                             </>
                         )}
 
-                        <label>Description</label>
-                        <textarea
-                            type="text"
-                            onChange={(e) => {
-                                setDescription(e.target.value);
-                            }}
-                            placeholder="Product Description"
-                        ></textarea>
                         <label>Key Specications</label>
                         <textarea
                             type="text"
@@ -165,6 +157,15 @@ const Addproduct = () => {
                                 setDescription(e.target.value);
                             }}
                             placeholder="Enter Some Specifications"
+                        ></textarea>
+
+                        <label>Description</label>
+                        <textarea
+                            type="text"
+                            onChange={(e) => {
+                                setDescription(e.target.value);
+                            }}
+                            placeholder="Product Description"
                         ></textarea>
 
                         <label>Price</label>

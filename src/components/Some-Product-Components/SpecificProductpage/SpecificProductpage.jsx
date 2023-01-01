@@ -64,6 +64,7 @@ const SpecificProductpage = () => {
                     <img className='prod-img-cont' src={product.productimage} alt="" />
                 <div className='prod-data'>
                  <p className='prod-head'>{product.productTitle}</p>
+                 <p className='prod-head'>{product.keyspecs}</p>
                 </div>
                 </div> : <div>loding</div>}
         </div>
